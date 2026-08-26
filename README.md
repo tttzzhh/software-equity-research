@@ -85,10 +85,13 @@ HTML Dashboard 与研报共用同一套数字和判断。首屏只放资金、�
 完整报告：
 
 ```text
-使用 $software-equity-research，对网络安全软件板块做完整报告。
-包括资金流向、行业分析，以及 CRWD、PANW、ZS 的个股深度分析。
-先固定比较区间、基准和同业选择规则，输出 Markdown 研报和 HTML Dashboard。
-```
+使用 $software-equity-research，对美股软件板块做一份完整报告。
+
+覆盖网络安全、数据平台、企业工作流、广告与交易平台等主要子板块，并对 CRWD、SNOW、NOW、APP 进行个股深度分析。
+
+开始前固定研究日期、比较区间、市场基准、ETF 范围、子板块定义和同业选择规则。资金流部分区分整体软件板块与各子板块表现；行业部分比较增长阶段、商业模式、竞争格局和估值环境；最后建立个股 Bear、Base、Bull 情景并给出条件式研究动作。
+
+输出 Markdown 研报和 HTML Dashboard，确保两者的数字、情景和结论一致。
 
 单独分析财报：
 
