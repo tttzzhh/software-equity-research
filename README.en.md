@@ -54,10 +54,13 @@ The HTML dashboard is a visual layer of the report. Its opening view presents th
 ## Examples
 
 ```text
-Use $software-equity-research to produce a complete cybersecurity software report.
-Include fund flows, industry analysis, and company deep dives for CRWD, PANW, and ZS.
-Lock the period, benchmarks, and peer-selection rule before collecting results.
-Deliver a Markdown report and an HTML dashboard.
+Use $software-equity-research to produce a complete report on the U.S. software sector.
+
+Cover the major subsectors, including cybersecurity, data platforms, enterprise workflow, and advertising and transaction platforms. Include company deep dives for CRWD, SNOW, NOW, and APP.
+
+Before collecting results, lock the as-of date, comparison period, market benchmarks, ETF universe, subsector definitions, and peer-selection rules. Separate broad software-sector positioning from subsector performance, compare industry growth stages, business models, competitive structures, and valuation conditions, and finish with bear, base, and bull scenarios plus a conditional research action for each company.
+
+Deliver a Markdown research report and an HTML dashboard with consistent figures, scenarios, and conclusions.
 ```
 
 ```text
@@ -84,7 +87,4 @@ software-equity-research/
     ├── moat-and-risks.md
     └── subsectors.md
 ```
-
-Copy the folder into the Codex Skills directory and invoke it with `$software-equity-research`.
-
 This skill provides a conditional research framework, not personalized investment advice.
