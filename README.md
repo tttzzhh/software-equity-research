@@ -1,0 +1,132 @@
+# Software Equity Research
+
+**语言：中文｜[English](README.en.md)**
+
+一个用于软件行业股票研究的 Codex Skill。它把完整研究拆成四个相互衔接的模块：资金流向与市场定位、行业分析、个股深度分析、最终结论与 scenario 决策。
+
+这个版本解决两个常见问题：ETF 范围不再每次临时选择；Markdown 研报与 HTML Dashboard 不再自由发挥，而是遵循固定的信息结构、可读性标准和一致性检查。
+
+## 适用任务
+
+- 软件板块或子行业完整研报
+- ETF 资金流、相对强弱、广度和拥挤度分析
+- 云计算、网络安全等子行业研究
+- 软件公司财报拆解和个股深度分析
+- 同业比较、估值情景和持续监控清单
+- Markdown 研报与 HTML Dashboard 输出
+
+不适用于软件工程、产品架构或代码审查。
+
+## 四部分研究框架
+
+### 1. 资金流向与市场定位
+
+先锁定 ETF 和基准，再观察结果。Prompt 未指定时，默认使用：
+
+- 市场基准：SPY、QQQ
+- 软件核心：IGV、XSW
+- 云计算：WCLD、SKYY，必要时用 CLOU 交叉验证
+- 网络安全：CIBR、HACK，必要时用 BUG、IHAK 交叉验证
+- SOXX 只作为 AI 基础设施或科技风险偏好参照，不算软件资金流
+
+分析包括区间收益、相对强弱、最大回撤、波动率、广度、ETF 申赎、空头、期权和拥挤度。没有可靠申赎数据时，只能称为“表现与定位代理”，不能称为资金流。
+
+### 2. 行业分析
+
+按买方、产品任务、收入模式、规模和增长阶段选择同业，分析：
+
+- 客户预算、采用周期、监管和技术迁移
+- 席位、使用量、交易量和结果收费模式
+- 合同结构、收入可见性、毛利和自然扩张机制
+- 平台厂商、专业厂商、捆绑、自建、开源和商品化
+- 可比较的行业 KPI、领先指标和反证条件
+
+### 3. 个股深度分析
+
+从产品、买方和收入引擎开始，依次检查：
+
+- ARR、NRR/NDR、RPO、客户数、收入和增长质量
+- GAAP 与非 GAAP 利润率、自由现金流、股权激励和稀释
+- 工作流深度、切换成本、数据、集成、分发和生态
+- 估值口径、熊市/基准/牛市场景、催化剂和证伪条件
+
+未披露的数据标记为 `Missing Data` 或 `not disclosed`，不得猜测。
+
+### 4. 最终结论与 scenario 决策
+
+最后一部分分别给出：
+
+- 资金流向结论：广泛参与、集中上涨、去风险、空头回补或证据不足
+- 行业发展定位：早期采用、加速渗透、主流扩张、成熟、整合或结构性承压
+- 个股结论：商业质量、增长质量、护城河、执行、估值和风险
+
+每只个股都必须建立 Bear、Base、Bull 三种情景，并在披露当前价格、估值日期、预期回报和下行情景后，给出一个条件式研究动作：`Buy / Accumulate`、`Watchlist / Hold`、`Avoid / Reduce`、`Speculative / High Risk` 或 `No Rating`。
+
+Prompt 未指定门槛时，默认研究规则为：Base case 预期回报至少 20%、Bear case 下跌不超过 25%，且没有已出现的重大反证，才可以给出 `Buy / Accumulate`。缺少当前价格或估值输入时只能给 `No Rating`，不能从基本面强行推出买入建议。
+
+## 稳定输出协议
+
+完整报告固定为：
+
+1. 研究范围和比较设计
+2. 三条执行摘要：资金、行业、个股各一条
+3. Part 1：资金流向
+4. Part 2：行业分析
+5. Part 3：个股深度
+6. 来源、方法、限制和缺失数据
+7. Part 4：最终结论、scenario 决策和监控清单
+
+每个模块都必须给出结论、支持证据、反证、缺失数据和下一项可验证指标。
+
+HTML Dashboard 与研报共用同一套数字和判断。首屏只放资金、行业、个股三条结论，不堆详细 KPI。第四部分是页面最后一个完整分析模块，必须显示资金结论、行业定位、个股动作、scenario、买入条件和证伪条件；其后只能出现简短来源页脚。正文不小于 17px，辅助文字不小于 14px，核心 KPI 不小于 32px。交付前检查控制台错误、溢出、可读性、来源和研报页面一致性。
+
+## 使用示例
+
+完整报告：
+
+```text
+使用 $software-equity-research，对网络安全软件板块做完整报告。
+包括资金流向、行业分析，以及 CRWD、PANW、ZS 的个股深度分析。
+先固定比较区间、基准和同业选择规则，输出 Markdown 研报和 HTML Dashboard。
+```
+
+单独分析财报：
+
+```text
+使用 $software-equity-research 分析这份软件公司财报。
+重点检查 ARR、NRR、RPO、增长质量、利润率、现金流、股权激励和指引变化。
+区分公司披露、推导数据和分析判断。
+```
+
+只做资金流：
+
+```text
+使用 $software-equity-research，只分析软件板块资金流和市场定位。
+未指定 ETF 时使用默认软件池，并比较市值加权与等权表现。
+```
+
+## 文件结构
+
+```text
+software-equity-research/
+├── SKILL.md
+├── README.md
+├── README.en.md
+├── agents/
+│   └── openai.yaml
+└── references/
+    ├── etf-universe.md
+    ├── investment-conclusion.md
+    ├── output-spec.md
+    ├── market-positioning.md
+    ├── metrics.md
+    ├── business-models.md
+    ├── moat-and-risks.md
+    └── subsectors.md
+```
+
+## 安装
+
+把整个 `software-equity-research` 文件夹放入 Codex Skills 目录，然后在任务中使用 `$software-equity-research` 调用。
+
+本 Skill 产出的是条件性研究框架，不构成个性化投资建议。
