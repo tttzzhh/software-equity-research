@@ -33,10 +33,12 @@ Choose peers by buyer, product mission, revenue model, scale, growth stage, and 
 ### Part 1 - Fund flows and market positioning
 
 1. Lock the universe before observing performance. If the prompt is silent, use SPY and QQQ as benchmarks and IGV and XSW as the broad software pair; add only relevant subsector proxies.
-2. Measure verified creations or redemptions, flow relative to beginning AUM, persistence, and concentration. Never call trading volume or price-driven AUM growth an inflow.
-3. Compare absolute and relative returns, cap-weighted and equal-weighted performance, breadth, and leadership concentration.
-4. Add short interest, borrow, options, and crowding evidence when reliable data exist, preserving reporting lags.
-5. Conclude **broad participation**, **concentrated leadership**, **de-risking**, **short covering**, or **inconclusive**, and state what would change the conclusion.
+2. Call Alpha Vantage first for market data when the connector is available: use `TIME_SERIES_DAILY_ADJUSTED` for historical ETF and stock OHLCV, adjusted close, splits, and dividends; `GLOBAL_QUOTE` for the dated latest quote; and `ETF_PROFILE` for fund metadata and holdings. Save the raw responses and query dates.
+3. Use Alpha Vantage price data to calculate returns, drawdowns, realized volatility, relative strength, and price-based breadth. State whether the analysis uses adjusted close, raw close, price return, or total return.
+4. Measure verified creations or redemptions, flow relative to beginning AUM, persistence, and concentration. Alpha Vantage prices, volume, and ETF profiles do not by themselves prove net creations or redemptions. Never call trading volume or price-driven AUM growth an inflow.
+5. Compare absolute and relative returns, cap-weighted and equal-weighted performance, breadth, and leadership concentration.
+6. Add short interest, borrow, options, and crowding evidence when reliable data exist, preserving reporting lags.
+7. Conclude **broad participation**, **concentrated leadership**, **de-risking**, **short covering**, or **inconclusive**, and state what would change the conclusion.
 
 ### Part 2 - Industry analysis
 
