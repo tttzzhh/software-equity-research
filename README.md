@@ -125,8 +125,6 @@ software-equity-research/
     └── subsectors.md
 ```
 
-## 安装
-
-把整个 `software-equity-research` 文件夹放入 Codex Skills 目录，然后在任务中使用 `$software-equity-research` 调用。
+## 免责声明
 
 本 Skill 产出的是条件性研究框架，不构成个性化投资建议。
